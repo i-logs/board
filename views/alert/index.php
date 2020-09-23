@@ -32,7 +32,10 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'project_id',
                 'value' => function (Alert $model) {
-                    return Html::img($model->project->logo,['style'=>['width' => '50px']]);
+                    if(!empty($model->project->logo))
+                        return Html::img($model->project->logo,['style'=>['width' => '50px']]);
+                    else
+                        return $model->project->name;
                 },
                 'format' => 'raw',
                 'label' => 'Project'
