@@ -6,8 +6,8 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'firestarter-app',
     'name' => 'BoarD',
-    'language' => 'hu',
-    'timezone' => 'Europe/Bratislava',
+    'language' => 'en',
+    'timezone' => 'Europe/Brussels',
     'basePath' => dirname(__DIR__),
     'bootstrap' => [
         'log',
@@ -40,7 +40,7 @@ $config = [
     'components' => [
         'installer' => 'app\services\InstallerService',
         'formatter' => [
-          'defaultTimeZone' => 'Europe/Bratislava'
+          'defaultTimeZone' => 'Europe/Brussels'
         ],
         'view' => [
             'theme' => [
@@ -62,7 +62,7 @@ $config = [
         ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'Htarvdp1C0zeF7LvQ1a0JfGpM4z4uUIy',
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
             ]
