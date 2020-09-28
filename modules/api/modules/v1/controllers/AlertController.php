@@ -92,11 +92,12 @@ class AlertController extends Controller
                         $ak->keyword_id = $keywordRecord->id;
                         $ak->save();
 
-                        return [
-                            'status' => 200
-                        ];
                     }
                 }
+
+                return [
+                    'status' => 200
+                ];
             }
         }
 
